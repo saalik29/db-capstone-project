@@ -1,0 +1,6 @@
+USE little_lemon_id;
+DROP PROCEDURE IF EXISTS CancelOrder; 
+DELIMITER $$ 
+CREATE PROCEDURE CancelOrder(IN OrderID INT)
+DELETE FROM orders;
+DELIMITER ;
